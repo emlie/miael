@@ -35,6 +35,8 @@
   --p-gray-lighter: #D2D2D2;
   --p-beige: #EECA9E;
 
+  --logo-green: #2edba4;
+
   --almost-white: #f7f7f7;
   --gray-darker: #696969;
   --gray: #ccc;
@@ -81,6 +83,30 @@
   font-size: 62.5%; /* 1 rem = 10 px */
 }
 
+body {
+  background: var(--almost-white);
+}
+
+
+
+
+
+.margin-r {
+  margin-right: 1rem;
+}
+
+.margin-l {
+  margin-left: 1rem;
+}
+
+.padding-a {
+  padding: 0 0.5rem 0.25rem 0.5rem;
+}
+
+
+
+
+
 h3 {
   padding-bottom: 0.5rem;
 
@@ -105,6 +131,34 @@ h4 {
   color: var(--almost-black);
 }
 
+
+
+
+
+.header-a {
+  font-family: var(--main-ff-ss-1);
+  font-size: 1.25rem;
+  font-weight: var(--regular);
+  text-align: center;
+  text-transform: none;
+  text-decoration: none;
+  letter-spacing: 0.1rem;
+  line-height: 1vw;
+  color: var(--almost-black);
+}
+
+.header-a a {
+  font-size: inherit;
+  color: inherit;
+
+  transition: var(--smooth);
+}
+
+.header-a a:hover {
+  /* border-bottom: 1px solid var(--logo-green); */
+  color: var(--logo-green);
+}
+
 footer {
   position: absolute;
 
@@ -112,7 +166,7 @@ footer {
   height: auto;
 
   bottom: 0;
-  padding: 4rem 0;
+  padding: 2rem 0;
 
   background: var(--gray-lighter);
 
@@ -162,6 +216,18 @@ footer p {
   border-radius: 100%;
 }
 
+.icon {
+  width: 3.5rem;
+  height: 3.5rem;
+
+  border: 0 solid red;
+  border-radius: 100%;
+}
+
+.icon img {
+  width: 100%;
+}
+
 .h4 {
   margin-bottom: 0.5rem;
   padding: 0.5rem 2rem;
@@ -206,7 +272,7 @@ footer p {
 }
 
 .social:hover {
-  border-bottom: 1px solid var(--pink);
+  border-bottom: 1px solid var(--logo-green);
 }
 
 
@@ -218,9 +284,9 @@ footer p {
 #profile {
   width: 100%;
 
-  padding: 4rem 0;
+  padding: 2rem 0;
 
-  background: var(--gray-lighter);
+  background: transparent;
 
   display: flex;
   align-items: center;
