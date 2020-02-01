@@ -66,6 +66,10 @@
   --smooth-lighter-shadow: 0 2px 4px var(--almost-white), 0 2px 4px rgba(0,0,0,0.15);
   --smooth-dark-shadow: 0 1.5rem 2rem rgba(0,0,0,0.3), 0 0 2rem rgba(0,0,0,0.1);
   --smooth-big-dark-shadow: 0 4px 100px var(--almost-white), 0 4px 100px rgba(0,0,0,0.5);
+
+
+  /* for JS */
+  --margin: 0rem;
 }
 
 
@@ -85,6 +89,11 @@
 
 body {
   background: var(--almost-white);
+
+  display: flex;
+  align-items: center;
+  align-content: flex-start;
+  justify-content: center;
 }
 
 
@@ -135,30 +144,6 @@ h4 {
 
 
 
-.header-a {
-  font-family: var(--main-ff-ss-1);
-  font-size: 1.25rem;
-  font-weight: var(--regular);
-  text-align: center;
-  text-transform: none;
-  text-decoration: none;
-  letter-spacing: 0.1rem;
-  line-height: 1vw;
-  color: var(--almost-black);
-}
-
-.header-a a {
-  font-size: inherit;
-  color: inherit;
-
-  transition: var(--smooth);
-}
-
-.header-a a:hover {
-  /* border-bottom: 1px solid var(--logo-green); */
-  color: var(--logo-green);
-}
-
 footer {
   position: absolute;
 
@@ -198,12 +183,37 @@ footer p {
 
 
 
-/* ID */
+/* CLASS */
+
+.header-a {
+  font-family: var(--main-ff-ss-1);
+  font-size: 1.25rem;
+  font-weight: var(--regular);
+  text-align: center;
+  text-transform: lowercase;
+  text-decoration: none;
+  letter-spacing: 0.1rem;
+  line-height: 1vw;
+  color: var(--almost-black);
+}
+
+.header-a a {
+  font-size: inherit;
+  color: inherit;
+
+  transition: var(--smooth);
+}
+
+.header-a a:hover {
+  /* border-bottom: 1px solid var(--logo-green); */
+  color: var(--logo-green);
+}
 
 .faceImg {
   width: 15rem;
   height: 15rem;
 
+  margin-top: 20rem;
   margin-right: 2rem;
 
   border: 0 solid blue;
@@ -281,9 +291,11 @@ footer p {
 
 /* ID */
 
-#profile {
+#header {
+  position: absolute;
   width: 100%;
 
+  top: 0;
   padding: 2rem 0;
 
   background: transparent;
@@ -292,4 +304,8 @@ footer p {
   align-items: center;
   align-content: center;
   justify-content: center;
+}
+
+#face {
+  position: relative;
 }

@@ -7,9 +7,9 @@
   </head>
   <body>
 
-    <div id="profile" class="">
+    <div id="header" class="">
       <div class="header-a margin-r padding-a">
-        <a href="#">profile</a>
+        <a href="#">{{link}}</a>
       </div>
       <a href="index.html" title="home">
         <div class="icon">
@@ -19,17 +19,10 @@
       <div class="header-a margin-l padding-a">
         <a href="#">projects</a>
       </div>
-      <!--
-      <div class="faceImg">
-        <img src="img/profile.jpg" alt="my face">
-      </div>
-      <div class="text">
-        <h3>Mia Elisenberg</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-      </div>
-      -->
+    </div>
+
+    <div id="face" class="faceImg">
+      <img :src="img" :alt="imgAlt">
     </div>
 
     <footer>
@@ -44,4 +37,9 @@
     </footer>
 
   </body>
+
+  <!-- development version, includes helpful console warnings -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="index.js"></script>
+
 </html>
