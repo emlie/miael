@@ -23,28 +23,35 @@
         </div>
       </div>
 
+      <div id="home" class="content">
+        <h3>Currently working on</h3>
+        <ul>
+          <li v-for="thing in home.currently">{{thing}}</li>
+        </ul>
+      </div>
+
       <div id="profile" class="content" v-show="showingProfile">
-        <h3>Mia Elisenberg</h3>
-        <p>hei</p>
+        <h3>{{profile.title}}</h3>
+        <p>{{profile.text}}</p>
       </div>
 
       <div id="projects" class="content" v-show="showingProject">
         <div class="project-collection">
-          <h3>ESDA</h3>
+          <h3>{{esda.title}}</h3>
           <p>{{esda.description}}</p>
           <div class="projects">
             <div>
-              <h2>Design notes</h2>
+              <h2>{{esda.designNotes.title}}</h2>
               <ul>
-                <li v-for="designNote in esda.designNotes">
+                <li v-for="designNote in esda.designNotes.content">
                   <a :href="designNote.path">{{designNote.title}}</a>
                 </li>
               </ul>
             </div>
             <div>
-              <h2>Application notes</h2>
+              <h2>{{esda.appNotes.title}}</h2>
               <ul>
-                <li v-for="appNote in esda.appNotes">
+                <li v-for="appNote in esda.appNotes.content">
                   <a :href="appNote.path">{{appNote.title}}</a>
                 </li>
               </ul>
@@ -52,19 +59,23 @@
           </div>
         </div>
         <div class="project-collection">
-          <h3>Other</h3>
+          <h3>{{other.title}}</h3>
           <p>{{other.description}}</p>
           <div class="projects">
             <div>
-              <h2>Design notes</h2>
+              <h2>{{esda.designNotes.title}}</h2>
               <ul>
-                <li v-for="designNote in esda.designNotes">{{designNote}}</li>
+                <li v-for="designNote in esda.designNotes.content">
+                  <a :href="designNote.path">{{designNote.title}}</a>
+                </li>
               </ul>
             </div>
             <div>
-              <h2>Application notes</h2>
+              <h2>{{esda.appNotes.title}}</h2>
               <ul>
-                <li v-for="appNote in esda.appNotes">{{appNote}}</li>
+                <li v-for="appNote in esda.appNotes.content">
+                  <a :href="appNote.path">{{appNote.title}}</a>
+                </li>
               </ul>
             </div>
           </div>
@@ -75,10 +86,16 @@
         <div class="h4">
           <h4>Contact</h4>
         </div>
-        <p>Mia Elisenberg</p>
-        <p>mi-ya@live.no</p>
-        <div class="social">
-          <a href="github.com/emlie/">Github</a>
+        <p>Mia Elisenberg | mi-ya@live.no</p>
+        <p>
+          Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> and <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+        </p>
+        <div class="socials">
+          <div class="social" v-for="social in socials">
+            <a :href="social.url">
+              <img :src="social.img" :alt="social.title" :title="social.title">
+            </a>
+          </div>
         </div>
       </footer>
 

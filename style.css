@@ -178,6 +178,30 @@ i {
 
 
 
+ul li {
+  margin-left: 1.25rem;
+
+  font-family: var(--main-ff-ss-0);
+  font-size: 1.25rem;
+  font-weight: var(--regular);
+  text-align: left;
+  text-transform: none;
+  text-decoration: none;
+  letter-spacing: 0.1rem;
+  line-height: 2.5rem;
+  color: var(--almost-black);
+}
+
+ul li a {
+  border-bottom: 1px solid var(--logo-green);
+
+  font-size: inherit;
+}
+
+
+
+
+
 footer {
   position: absolute;
 
@@ -197,20 +221,25 @@ footer {
 }
 
 footer p {
-  width: 30rem;
+  width: 25%;
   height: auto;
 
   border: 0 solid red;
 
   font-family: var(--main-ff-ss-0);
-  font-size: 0.7vw;
+  font-size: 1rem;
   font-weight: var(--regular);
   text-align: center;
   text-transform: none;
   text-decoration: none;
   letter-spacing: 0.1rem;
-  line-height: 1vw;
+  line-height: 2rem;
   color: var(--almost-black);
+}
+
+footer a {
+  font-size: inherit;
+  text-decoration: none;
 }
 
 
@@ -304,11 +333,26 @@ footer p {
   color: var(--almost-black);
 }
 
-.social {
+.socials {
   margin-top: 0.5rem;
+
+  border: 0 solid red;
+
+  display: flex;
+  align-items: center;
+  align-content: flex-start;
+  justify-content: center;
+}
+
+.social {
+  display: inline-block;
+
+  width: 2rem;
+  height: 2rem;
+
   padding: 0.25rem 0.25rem;
 
-  border-bottom: 1px solid var(--gray-darker);
+  /* border-bottom: 1px solid var(--gray-darker); */
 
   font-family: var(--main-ff-ss-0);
   font-size: 1vw;
@@ -323,8 +367,12 @@ footer p {
   transition: var(--smooth);
 }
 
+.social img {
+  width: 100%;
+}
+
 .social:hover {
-  border-bottom: 1px solid var(--logo-green);
+  /* border-bottom: 1px solid var(--logo-green); */
 }
 
 .projects {
@@ -343,26 +391,6 @@ footer p {
   /* cols / row */
   grid-template: 1fr / repeat(2, 1fr);
   grid-gap: var(--space);
-}
-
-.projects ul li {
-  margin-left: 1.25rem;
-
-  font-family: var(--main-ff-ss-0);
-  font-size: 1.25rem;
-  font-weight: var(--regular);
-  text-align: left;
-  text-transform: none;
-  text-decoration: none;
-  letter-spacing: 0.1rem;
-  line-height: 2.5rem;
-  color: var(--almost-black);
-}
-
-.projects ul li a {
-  border-bottom: 1px solid var(--logo-green);
-
-  font-size: inherit;
 }
 
 .project-collection {
