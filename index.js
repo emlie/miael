@@ -24,6 +24,16 @@ const header = new Vue ({
   }
 });
 
+const projects = new Vue ({
+  el: '#projects',
+  data: {
+    esda1: {
+      designNotes: ['Nivåregulator'],
+      appNotes: ['Turtallsindikator']
+    }
+  }
+});
+
 function pxToNum(string) {
   // remove "px" at the end and turn string to number
   return Number(string.slice(0, string.length - 2));

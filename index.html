@@ -21,9 +21,62 @@
       </div>
     </div>
 
+    <div id="projects">
+      <div class="project-collection">
+        <h3>ESDA</h3>
+        <p>Assignments part of <i>Elektronisk systemdesign og -analyse I & II</i> (written in Norwegian).</p>
+        <div class="projects">
+          <div>
+            <h2>Design notes</h2>
+            <ul>
+              <li v-for="designNote in esda1.designNotes">{{designNote}}</li>
+            </ul>
+          </div>
+          <div>
+            <h2>Application notes</h2>
+            <ul>
+              <li v-for="appNote in esda1.appNotes">{{appNote}}</li>
+            </ul>
+          </div>
+          <div>
+            <h2>Something else</h2>
+            <ul>
+              <li v-for="appNote in esda1.appNotes">{{appNote}}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="project-collection">
+        <h3>Other</h3>
+        <p>Assignments part of <i>Elektronisk systemdesign og -analyse I & II</i> (written in Norwegian).</p>
+        <div class="projects">
+          <div>
+            <h2>Design notes</h2>
+            <ul>
+              <li v-for="designNote in esda1.designNotes">{{designNote}}</li>
+            </ul>
+          </div>
+          <div>
+            <h2>Application notes</h2>
+            <ul>
+              <li v-for="appNote in esda1.appNotes">{{appNote}}</li>
+            </ul>
+          </div>
+          <div>
+            <h2>Something else</h2>
+            <ul>
+              <li v-for="appNote in esda1.appNotes">{{appNote}}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--
     <div id="face" class="faceImg">
       <img :src="img" :alt="imgAlt">
     </div>
+  -->
 
     <footer>
       <div class="h4">
