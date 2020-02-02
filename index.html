@@ -11,7 +11,7 @@
 
       <div id="header">
         <div class="header-a margin-r padding-a">
-          <a href="#">profile</a>
+          <a href="#" @click="showingProfile ^= true">profile</a>
         </div>
         <a href="index.html" title="home">
           <div class="icon">
@@ -19,38 +19,41 @@
           </div>
         </a>
         <div class="header-a margin-l padding-a">
-          <a href="#" @click="showing ^= true">projects</a>
+          <a href="#" @click="showingProject ^= true">projects</a>
         </div>
       </div>
 
-      <div id="projects" v-show="showing">
+      <div id="profile" class="content" v-show="showingProfile">
+        <h3>Mia Elisenberg</h3>
+        <p>hei</p>
+      </div>
+
+      <div id="projects" class="content" v-show="showingProject">
         <div class="project-collection">
           <h3>ESDA</h3>
-          <p>Assignments part of <i>Elektronisk systemdesign og -analyse I & II</i> (written in Norwegian).</p>
+          <p>{{esda.description}}</p>
           <div class="projects">
             <div>
               <h2>Design notes</h2>
               <ul>
-                <li v-for="designNote in esda.designNotes">{{designNote}}</li>
+                <li v-for="designNote in esda.designNotes">
+                  <a :href="designNote.path">{{designNote.title}}</a>
+                </li>
               </ul>
             </div>
             <div>
               <h2>Application notes</h2>
               <ul>
-                <li v-for="appNote in esda.appNotes">{{appNote}}</li>
-              </ul>
-            </div>
-            <div>
-              <h2>Something else</h2>
-              <ul>
-                <li v-for="appNote in esda.appNotes">{{appNote}}</li>
+                <li v-for="appNote in esda.appNotes">
+                  <a :href="appNote.path">{{appNote.title}}</a>
+                </li>
               </ul>
             </div>
           </div>
         </div>
         <div class="project-collection">
           <h3>Other</h3>
-          <p>Assignments part of <i>Elektronisk systemdesign og -analyse I & II</i> (written in Norwegian).</p>
+          <p>{{other.description}}</p>
           <div class="projects">
             <div>
               <h2>Design notes</h2>
@@ -60,12 +63,6 @@
             </div>
             <div>
               <h2>Application notes</h2>
-              <ul>
-                <li v-for="appNote in esda.appNotes">{{appNote}}</li>
-              </ul>
-            </div>
-            <div>
-              <h2>Something else</h2>
               <ul>
                 <li v-for="appNote in esda.appNotes">{{appNote}}</li>
               </ul>

@@ -1,24 +1,27 @@
 // jshint esversion: 6
 
-/*
-const projects = new Vue ({
-  el: '#projects',
-  data: {
-    esda: {
-      designNotes: ['Nivåregulator'],
-      appNotes: ['Turtallsindikator']
-    }
-  }
-});
-*/
-
 const app = new Vue ({
   el: '#app',
   data: {
-    showing: false,
+    showingProfile: false,
+    showingProject: false,
     esda: {
-      designNotes: ['Nivåregulator'],
-      appNotes: ['Turtallsindikator']
+      description: 'Assignments part of Elektronisk systemdesign og -analyse I & II (written in Norwegian).',
+      designNotes: [
+        {
+          title: 'Nivåregulator',
+          path: 'esda1/D1_Niv_regulator.pdf'
+        }
+      ],
+      appNotes: [
+        {
+          title: 'Turtallsindikator med transistor',
+          path: 'esda1/D1_Niv_regulator.pdf'
+        }
+      ]
+    },
+    other: {
+      description: 'Some other projects',
     }
   }
 });

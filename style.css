@@ -243,6 +243,14 @@ footer p {
   color: var(--logo-green);
 }
 
+.content {
+  width: 50%;
+
+  margin-top: 10rem;
+
+  border: 0 solid red;
+}
+
 .faceImg {
   width: 15rem;
   height: 15rem;
@@ -333,7 +341,7 @@ footer p {
   display: grid;
 
   /* cols / row */
-  grid-template: 1fr / repeat(3, 1fr);
+  grid-template: 1fr / repeat(2, 1fr);
   grid-gap: var(--space);
 }
 
@@ -349,6 +357,12 @@ footer p {
   letter-spacing: 0.1rem;
   line-height: 2.5rem;
   color: var(--almost-black);
+}
+
+.projects ul li a {
+  border-bottom: 1px solid var(--logo-green);
+
+  font-size: inherit;
 }
 
 .project-collection {
@@ -383,14 +397,4 @@ footer p {
   align-items: center;
   align-content: center;
   justify-content: center;
-}
-
-#projects {
-  width: 50%;
-
-  margin-top: 10rem;
-
-  border: 0 solid red;
-
-  transition: var(--smooth);
 }
