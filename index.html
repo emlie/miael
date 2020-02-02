@@ -7,87 +7,85 @@
   </head>
   <body>
 
-    <div id="header" class="">
-      <div class="header-a margin-r padding-a">
-        <a href="#">{{link}}</a>
-      </div>
-      <a href="index.html" title="home">
-        <div class="icon">
-          <img src="img/icon.png" alt="logo icon">
-        </div>
-      </a>
-      <div class="header-a margin-l padding-a">
-        <a href="#">projects</a>
-      </div>
-    </div>
+    <div id="app">
 
-    <div id="projects">
-      <div class="project-collection">
-        <h3>ESDA</h3>
-        <p>Assignments part of <i>Elektronisk systemdesign og -analyse I & II</i> (written in Norwegian).</p>
-        <div class="projects">
-          <div>
-            <h2>Design notes</h2>
-            <ul>
-              <li v-for="designNote in esda1.designNotes">{{designNote}}</li>
-            </ul>
+      <div id="header">
+        <div class="header-a margin-r padding-a">
+          <a href="#">profile</a>
+        </div>
+        <a href="index.html" title="home">
+          <div class="icon">
+            <img src="img/icon.png" alt="logo icon">
           </div>
-          <div>
-            <h2>Application notes</h2>
-            <ul>
-              <li v-for="appNote in esda1.appNotes">{{appNote}}</li>
-            </ul>
-          </div>
-          <div>
-            <h2>Something else</h2>
-            <ul>
-              <li v-for="appNote in esda1.appNotes">{{appNote}}</li>
-            </ul>
-          </div>
+        </a>
+        <div class="header-a margin-l padding-a">
+          <a href="#" @click="showing ^= true">projects</a>
         </div>
       </div>
-      <div class="project-collection">
-        <h3>Other</h3>
-        <p>Assignments part of <i>Elektronisk systemdesign og -analyse I & II</i> (written in Norwegian).</p>
-        <div class="projects">
-          <div>
-            <h2>Design notes</h2>
-            <ul>
-              <li v-for="designNote in esda1.designNotes">{{designNote}}</li>
-            </ul>
+
+      <div id="projects" v-show="showing">
+        <div class="project-collection">
+          <h3>ESDA</h3>
+          <p>Assignments part of <i>Elektronisk systemdesign og -analyse I & II</i> (written in Norwegian).</p>
+          <div class="projects">
+            <div>
+              <h2>Design notes</h2>
+              <ul>
+                <li v-for="designNote in esda.designNotes">{{designNote}}</li>
+              </ul>
+            </div>
+            <div>
+              <h2>Application notes</h2>
+              <ul>
+                <li v-for="appNote in esda.appNotes">{{appNote}}</li>
+              </ul>
+            </div>
+            <div>
+              <h2>Something else</h2>
+              <ul>
+                <li v-for="appNote in esda.appNotes">{{appNote}}</li>
+              </ul>
+            </div>
           </div>
-          <div>
-            <h2>Application notes</h2>
-            <ul>
-              <li v-for="appNote in esda1.appNotes">{{appNote}}</li>
-            </ul>
-          </div>
-          <div>
-            <h2>Something else</h2>
-            <ul>
-              <li v-for="appNote in esda1.appNotes">{{appNote}}</li>
-            </ul>
+        </div>
+        <div class="project-collection">
+          <h3>Other</h3>
+          <p>Assignments part of <i>Elektronisk systemdesign og -analyse I & II</i> (written in Norwegian).</p>
+          <div class="projects">
+            <div>
+              <h2>Design notes</h2>
+              <ul>
+                <li v-for="designNote in esda.designNotes">{{designNote}}</li>
+              </ul>
+            </div>
+            <div>
+              <h2>Application notes</h2>
+              <ul>
+                <li v-for="appNote in esda.appNotes">{{appNote}}</li>
+              </ul>
+            </div>
+            <div>
+              <h2>Something else</h2>
+              <ul>
+                <li v-for="appNote in esda.appNotes">{{appNote}}</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!--
-    <div id="face" class="faceImg">
-      <img :src="img" :alt="imgAlt">
-    </div>
-  -->
+      <footer>
+        <div class="h4">
+          <h4>Contact</h4>
+        </div>
+        <p>Mia Elisenberg</p>
+        <p>mi-ya@live.no</p>
+        <div class="social">
+          <a href="github.com/emlie/">Github</a>
+        </div>
+      </footer>
 
-    <footer>
-      <div class="h4">
-        <h4>Contact</h4>
-      </div>
-      <p>Mia Elisenberg</p>
-      <p>mi-ya@live.no</p>
-      <div class="social">
-        <a href="github.com/emlie/">Github</a>
-      </div>
-    </footer>
+    </div>
 
   </body>
 

@@ -166,7 +166,7 @@ p {
   text-transform: none;
   text-decoration: none;
   letter-spacing: 0.1rem;
-  line-height: 1vw;
+  line-height: auto;
   color: var(--almost-black);
 }
 
@@ -361,6 +361,15 @@ footer p {
 
 /* ID */
 
+#app {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  align-content: flex-start;
+  justify-content: center;
+}
+
 #header {
   position: absolute;
   width: 100%;
@@ -376,14 +385,12 @@ footer p {
   justify-content: center;
 }
 
-#face {
-  position: relative;
-}
-
 #projects {
   width: 50%;
 
   margin-top: 10rem;
 
   border: 0 solid red;
+
+  transition: var(--smooth);
 }
