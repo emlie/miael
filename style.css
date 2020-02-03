@@ -193,9 +193,13 @@ ul li {
 }
 
 ul li a {
-  border-bottom: 1px solid var(--logo-green);
+  border-bottom: 1px solid var(--gray);
 
   font-size: inherit;
+}
+
+ul li a:hover {
+  border-bottom: 1px solid var(--logo-green);
 }
 
 
@@ -272,6 +276,16 @@ footer a {
   color: var(--logo-green);
 }
 
+.wrapper {
+  width: 100%;
+
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
 .content {
   width: 50%;
 
@@ -280,12 +294,20 @@ footer a {
   border: 0 solid red;
 }
 
+.mor-top {
+  margin-top: 15rem;
+}
+
+.less-top {
+  margin-top: 4rem;
+}
+
 .faceImg {
   width: 15rem;
   height: 15rem;
 
-  margin-top: 20rem;
-  margin-right: 2rem;
+  margin-top: 0;
+  margin-right: 4rem;
 
   border: 0 solid blue;
   border-radius: 100%;
@@ -420,6 +442,17 @@ footer a {
   padding: 2rem 0;
 
   background: transparent;
+
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+#profile {
+  width: 65%;
+
+  border: 0 solid red;
 
   display: flex;
   align-items: center;
