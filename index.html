@@ -11,31 +11,31 @@
 
       <div id="header">
         <div class="header-a margin-r padding-a">
-          <a href="#" @click="showingProfile ^= true">profile</a>
+          <router-link to="/profile">profile</router-link>
         </div>
-        <a href="index.html" title="home">
+        <router-link to="/">
           <div class="icon">
             <img src="img/icon.png" alt="logo icon">
           </div>
-        </a>
+        </router-link>
         <div class="header-a margin-l padding-a">
-          <a href="#" @click="showingProject ^= true">projects</a>
+          <router-link to="/projects">projects</router-link>
         </div>
       </div>
 
+      <router-view></router-view>
+
+      <!--
       <div id="home" class="content">
         <h3>Currently working on</h3>
         <ul>
           <li v-for="thing in home.currently">{{thing}}</li>
         </ul>
       </div>
+    -->
 
-      <div id="profile" class="content" v-show="showingProfile">
-        <h3>{{profile.title}}</h3>
-        <p>{{profile.text}}</p>
-      </div>
-
-      <div id="projects" class="content" v-show="showingProject">
+      <!--
+      <div id="projects" class="content">
         <div class="project-collection">
           <h3>{{esda.title}}</h3>
           <p>{{esda.description}}</p>
@@ -81,6 +81,7 @@
           </div>
         </div>
       </div>
+    -->
 
       <footer>
         <div class="h4">
@@ -104,7 +105,9 @@
   </body>
 
   <!-- development version, includes helpful console warnings -->
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script src="index.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+  <script src="index.js" ></script>
 
 </html>
