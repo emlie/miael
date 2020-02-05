@@ -9,7 +9,7 @@ const Profile = {
   template: `
   <div class="wrapper">
     <div id="profile" class="content more-top" v-bind="profile">
-      <div class="faceImg">
+      <div class="faceImg mobile-more-top">
         <img :src="profile.img" alt="my face">
       </div>
       <div>
@@ -147,7 +147,7 @@ const Projects = {
       <p>{{other.description}}</p>
       <div class="projects-other">
         <div>
-          <h2>{{other.adobexd.title}}</h2>
+          <h2 class="mobile-more-top">{{other.adobexd.title}}</h2>
           <ul>
             <li v-for="design in other.adobexd.content">
               <a :href="design.path">{{design.title}}</a>
@@ -163,7 +163,7 @@ const Projects = {
       <p>{{esda.description}}</p>
       <div class="projects">
         <div>
-          <h2>{{esda.designNotes.title}}</h2>
+          <h2 class="mobile-more-top">{{esda.designNotes.title}}</h2>
           <ul>
             <li v-for="designNote in esda.designNotes.content">
               <a :href="designNote.path">{{designNote.title}}</a>
@@ -171,7 +171,7 @@ const Projects = {
           </ul>
         </div>
         <div>
-          <h2>{{esda.appNotes.title}}</h2>
+          <h2 class="mobile-more-top">{{esda.appNotes.title}}</h2>
           <ul>
             <li v-for="appNote in esda.appNotes.content">
               <a :href="appNote.path">{{appNote.title}}</a>
