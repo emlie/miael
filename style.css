@@ -150,7 +150,7 @@ h3 {
 
 h4 {
   font-family: var(--main-ff-ss-0);
-  font-size: 1.25vw;
+  font-size: 2rem;
   font-weight: var(--bold);
   text-align: center;
   text-transform: none;
@@ -208,10 +208,12 @@ ul li a:hover {
 
 
 footer {
-  position: absolute;
+  position: relative;
 
   width: 100%;
   height: auto;
+
+  margin-top: 6rem;
 
   bottom: 0;
   padding: 2rem 0;
@@ -494,4 +496,97 @@ footer a {
   align-items: center;
   align-content: center;
   justify-content: center;
+}
+
+
+
+
+
+@media (max-width: 414px) {
+  h1 {
+    font-size: 2vw;
+  }
+
+  h2 {
+    font-size: 4vw;
+  }
+
+  h3 {
+    font-size: 4vw;
+  }
+
+  h4 {
+    font-size: 4vw;
+  }
+
+
+  footer {
+    position: relative;
+
+    margin-top: 6rem;
+  }
+
+  footer p {
+    width: 80%;
+  }
+
+
+  .content {
+    width: 85%;
+
+    border: 0 solid red;
+  }
+
+  .project-collection {
+    border: 0 solid red;
+  }
+
+  .projects,
+  .projects-other {
+    padding: 0;
+
+    border: 0 solid blue;
+
+    grid-template: 1fr / 1fr;
+  }
+
+  .more-top {
+    margin-top: 6rem;
+  }
+
+  .mobile-more-top {
+    margin-top: 4rem;
+  }
+
+  .faceImg {
+    margin-right: 0;
+  }
+
+  .social {
+    width: 4rem;
+    height: 4rem;
+  }
+
+
+  #profile {
+    width: 65%;
+
+    border: 0 solid red;
+
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+  }
+
+  #profile div h3 {
+    margin-top: 2rem;
+
+    text-align: center;
+  }
+
+  #profile div p {
+    text-align: center;
+  }
 }
