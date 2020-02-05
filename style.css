@@ -305,6 +305,10 @@ footer a {
   margin-top: 4rem;
 }
 
+.more-bottom {
+  margin-bottom: 15rem;
+}
+
 .faceImg {
   width: 15rem; /* OG: 15rem */
   height: 15rem;

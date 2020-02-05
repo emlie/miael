@@ -7,7 +7,7 @@ Vue.use(VueRouter);
 
 const Profile = {
   template: `
-  <div class="wrapper">
+  <div class="wrapper more-bottom">
     <div id="profile" class="content more-top" v-bind="profile">
       <div class="faceImg mobile-more-top">
         <img :src="profile.img" alt="my face">
