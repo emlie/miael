@@ -519,7 +519,7 @@ footer a {
   }
 
   h3 {
-    font-size: 4vw;
+    font-size: 5vw;
   }
 
   h4 {
@@ -536,18 +536,18 @@ footer a {
   footer p {
     width: 80%;
 
-    font-size: 5vw;
+    font-size: 3vw;
     line-height: auto;
   }
 
 
   .header-a {
-    font-size: 4rem;
+    font-size: 2rem;
   }
 
   .icon {
-    width: 8rem;
-    height: 8rem;
+    width: 5rem;
+    height: 5rem;
   }
 
   .content {
@@ -560,6 +560,10 @@ footer a {
     border: 0 solid red;
   }
 
+  .project-collection p {
+    font-size: 4.5vw;
+  }
+
   .projects,
   .projects-other {
     padding: 0;
@@ -569,8 +573,17 @@ footer a {
     grid-template: 1fr / 1fr;
   }
 
+  .projects ul li,
+  .projects-other ul li {
+    font-size: 3.5vw;
+  }
+
   .more-top {
     margin-top: 6rem;
+  }
+
+  .mobile-even-more-top {
+    margin-top: 15rem;
   }
 
   .mobile-more-top {

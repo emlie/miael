@@ -7,7 +7,7 @@ Vue.use(VueRouter);
 
 const Profile = {
   template: `
-  <div class="wrapper more-bottom">
+  <div class="wrapper more-bottom mobile-more-top">
     <div id="profile" class="content more-top" v-bind="profile">
       <div class="faceImg mobile-more-top">
         <img :src="profile.img" alt="my face">
@@ -64,7 +64,7 @@ const Profile = {
 
 const Home = {
   template: `
-  <div id="home" class="content">
+  <div id="home" class="content mobile-even-more-top">
     <h3>
       Hi, I'm Mia
     </h3>
@@ -140,7 +140,7 @@ const Home = {
 
 const Projects = {
   template: `
-  <div id="projects" class="content">
+  <div id="projects" class="content mobile-even-more-top">
 
     <div class="project-collection">
       <h3>{{other.title}}</h3>
