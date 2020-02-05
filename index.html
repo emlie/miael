@@ -25,26 +25,52 @@
 
       <router-view></router-view>
 
-      <footer>
-        <div class="h4">
-          <h4>Contact</h4>
-        </div>
-        <p>Mia Elisenberg | mi-ya@live.no</p>
-        <p>
-          Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> and <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
-        </p>
-        <div class="socials">
-          <div class="social" v-for="social in socials">
-            <a :href="social.url">
-              <img :src="social.img" :alt="social.title" :title="social.title">
-            </a>
-          </div>
-        </div>
-      </footer>
-
     </div>
 
+    <footer>
+      <div class="h4">
+        <h4>Contact</h4>
+      </div>
+      <p>Mia Elisenberg | mi-ya@live.no</p>
+      <p>
+        Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> and <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+      </p>
+      <div class="socials">
+        <div class="social" v-for="social in socials">
+          <a :href="social.url">
+            <img :src="social.img" :alt="social.title" :title="social.title">
+          </a>
+        </div>
+      </div>
+    </footer>
+
   </body>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+  https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-database.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyBzFU5-FutFylZPpvRg3mmX7-vs1E1DvO8",
+      authDomain: "miael-6700e.firebaseapp.com",
+      databaseURL: "https://miael-6700e.firebaseio.com",
+      projectId: "miael-6700e",
+      storageBucket: "miael-6700e.appspot.com",
+      messagingSenderId: "250630446742",
+      appId: "1:250630446742:web:1649ec14bfc5ff3ef16cb7",
+      measurementId: "G-Y4FN6EZ7GG"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
 
   <!-- development version, includes helpful console warnings -->
   <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->

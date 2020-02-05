@@ -19,15 +19,22 @@ const Profile = {
     </div>
     <div class="content less-top">
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+        ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+        in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+        deserunt mollit anim id est laborum.
       </p>
     </div>
+    <!-- <img src="img/me-png.png" alt="drawing of me" class="drawing"> -->
   </div>
   `,
   data() {
     return {
       profile: {
-        img: 'img/profile.jpg',
+        img: 'img/me-png.png',
         title: 'Mia Elisenberg',
         text: 'Hey, this is some text about myself'
       }
@@ -153,6 +160,12 @@ const app = new Vue ({
     showingProfile: false,
     showingProject: false,
     */
+  }
+}).$mount('#app');
+
+const footer = new Vue ({
+  el: 'footer',
+  data: {
     socials: [
       {
         title: 'Github',
@@ -171,4 +184,4 @@ const app = new Vue ({
       }
     ]
   }
-}).$mount('#app');
+});
