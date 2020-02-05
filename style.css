@@ -295,7 +295,7 @@ footer a {
   border: 0 solid red;
 }
 
-.mor-top {
+.more-top {
   margin-top: 15rem;
 }
 
@@ -368,8 +368,18 @@ footer a {
   text-transform: none;
   text-decoration: none;
   letter-spacing: 0.1rem;
-  line-height: 1vw;
+  line-height: auto;
   color: var(--almost-black);
+}
+
+.inline-a {
+  border-bottom: 1px solid var(--gray);
+
+  font-size: inherit;
+}
+
+.inline-a:hover {
+  border-bottom: 1px solid var(--logo-green);
 }
 
 .socials {
@@ -419,7 +429,7 @@ footer a {
 
   border: 0 solid blue;
 
-  margin-top: 4rem;
+  margin-top: 2rem;
   padding: 2rem;
 
   /* row-start | col-start | row-end | col-end */
@@ -432,8 +442,17 @@ footer a {
   grid-gap: var(--space);
 }
 
+.projects-other {
+  width: 100%;
+
+  border: 0 solid blue;
+
+  margin-top: 2rem;
+  padding: 2rem;
+}
+
 .project-collection {
-  margin-bottom: 10rem;
+  margin-bottom: 8rem;
 }
 
 

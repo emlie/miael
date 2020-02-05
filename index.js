@@ -17,16 +17,18 @@ const Profile = {
         <p>{{profile.text}}</p>
       </div>
     </div>
-    <div class="content less-top">
+    <div class="content less-top air">
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-        ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-        in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-        deserunt mollit anim id est laborum.
+      I'm a curious person eager to learn as much as possible and with a big interest in web development
+      and design. I study <a :href="profile.links[0].path" class="inline-a">{{profile.links[0].title}}</a>,
+       work as a web developer and tech support at <a :href="profile.links[1].path" class="inline-a">{{profile.links[1].title}}</a>,
+       and I also work freelance as a mentor in <a :href="profile.links[2].path" class="inline-a">{{profile.links[2].title}}</a>.
       </p>
+      <ul class="less-top">
+        <li>
+          <a :href="profile.links[3].path">{{profile.links[3].title}}</a>
+        </li>
+      </ul>
     </div>
     <!-- <img src="img/me-png.png" alt="drawing of me" class="drawing"> -->
   </div>
@@ -36,7 +38,25 @@ const Profile = {
       profile: {
         img: 'img/me-png.png',
         title: 'Mia Elisenberg',
-        text: 'Hey, this is some text about myself'
+        text: 'Elsys student at NTNU Trondheim',
+        links: [
+          {
+            title: 'electronic system design and innovation (Elsys) ',
+            path: 'https://www.ntnu.no/studier/mtelsys/'
+          },
+          {
+            title: 'Vevcom, Omega',
+            path: 'https://omega.ntnu.no/frontpage'
+          },
+          {
+            title: 'MentorNorge',
+            path: 'https://mentornorge.no/'
+          },
+          {
+            title: 'Resume (Norwegian)',
+            path: 'docs/Mia Elisenberg CV.pdf'
+          }
+        ]
       }
     }
   }
@@ -45,18 +65,73 @@ const Profile = {
 const Home = {
   template: `
   <div id="home" class="content">
-    <h3>Currently working on</h3>
-    <ul>
-      <li v-for="thing in home.currently">{{thing}}</li>
-    </ul>
+    <h3>
+      Hi, I'm Mia
+    </h3>
+    <p>
+      Studying electronic system design at NTNU Trondheim
+      <br>
+      and working as a web developer in <a :href="home.links[0].path" class="inline-a">{{home.links[0].title}}</a>.
+    </p>
+
+    <div class="project-collection">
+      <div class="projects">
+        <div>
+          <h2 class="more-top">Currently self-learning</h2>
+          <ul>
+            <li v-for="thing in home.currently">
+            {{thing.title}}
+            <small>{{thing.description}}</small>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="more-top">Studying</h2>
+          <ul>
+            <li v-for="thing in home.studying">
+            {{thing.title}}
+            <small>{{thing.description}}</small>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
   </div>
   `,
   data() {
     return {
       home: {
+        about: 'heyheyhey',
+        links: [
+          {
+            title: 'Vevcom, Omega',
+            path: 'https://omega.ntnu.no/frontpage'
+          }
+        ],
         currently: [
-          'Vue.js',
-          'Backbone.js'
+          {
+            title: 'Vue.js',
+            description: 'For this website.'
+          },
+          {
+            title: 'Backbone.js',
+            description: 'For Vevcom at Omega (NTNU).'
+          },
+        ],
+        studying: [
+          {
+            title: 'C++',
+            description: 'Objekt- og prosedyreorientert programmering.'
+          },
+          {
+            title: 'Python',
+            description: 'ITGK & ESDA.'
+          },
+          {
+            title: 'Firebase',
+            description: 'IT1 & ELSYS GK.'
+          },
         ]
       }
     }
@@ -66,6 +141,23 @@ const Home = {
 const Projects = {
   template: `
   <div id="projects" class="content">
+
+    <div class="project-collection">
+      <h3>{{other.title}}</h3>
+      <p>{{other.description}}</p>
+      <div class="projects-other">
+        <div>
+          <h2>{{other.adobexd.title}}</h2>
+          <ul>
+            <li v-for="design in other.adobexd.content">
+              <a :href="design.path">{{design.title}}</a>
+              <small>{{design.description}}</small>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
     <div class="project-collection">
       <h3>{{esda.title}}</h3>
       <p>{{esda.description}}</p>
@@ -88,35 +180,14 @@ const Projects = {
         </div>
       </div>
     </div>
-    <div class="project-collection">
-      <h3>{{other.title}}</h3>
-      <p>{{other.description}}</p>
-      <div class="projects">
-        <div>
-          <h2>{{esda.designNotes.title}}</h2>
-          <ul>
-            <li v-for="designNote in esda.designNotes.content">
-              <a :href="designNote.path">{{designNote.title}}</a>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <h2>{{esda.appNotes.title}}</h2>
-          <ul>
-            <li v-for="appNote in esda.appNotes.content">
-              <a :href="appNote.path">{{appNote.title}}</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+
   </div>
   `,
   data() {
     return {
       esda: {
         title: 'ESDA',
-        description: 'Assignments part of Elektronisk systemdesign og -analyse I & II (written in Norwegian).',
+        description: 'Assignments part of the course Elektronisk systemdesign og -analyse I & II (written in Norwegian).',
         designNotes: {
           title: 'Design notes',
           content: [
@@ -131,14 +202,34 @@ const Projects = {
           content: [
             {
               title: 'Turtallsindikator med transistor',
-              path: 'esda1/D1_Niv_regulator.pdf'
+              path: 'esda1/D2_Turtallsindikator.pdf'
             }
           ]
         }
       },
       other: {
-        title: 'Other',
-        description: 'Some other projects',
+        title: 'Projects',
+        description: 'Some projects I have worked on in university and on my own.',
+        adobexd: {
+          title: 'Adobe XD',
+          content: [
+            {
+              title: 'Elsys Hackathon 2019',
+              description: 'Innovation competition in groups over 2 days.',
+              path: 'https://xd.adobe.com/view/065f867f-c7a0-417f-660d-b6c0f9fe6c2b-706e/?fullscreen'
+            },
+            {
+              title: 'Live Curling (web) 2019',
+              description: 'Part of the semester project in the course Elsys GK.',
+              path: 'https://xd.adobe.com/view/da8898fd-cb29-4825-68ae-6ff517b848ab-acb9/?fullscreen'
+            },
+            {
+              title: 'Live Curling (mobile) 2019',
+              description: 'Part of the semester project in the course Elsys GK.',
+              path: 'https://xd.adobe.com/view/8ec925c9-9fbe-45c0-573c-c746c22cfe92-f8f8/?fullscreen'
+            }
+          ]
+        }
       }
     }
   }
