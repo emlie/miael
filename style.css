@@ -531,8 +531,20 @@ footer a {
 
   footer p {
     width: 80%;
+
+    font-size: 5vw;
+    line-height: auto;
   }
 
+
+  .header-a {
+    font-size: 4rem;
+  }
+
+  .icon {
+    width: 8rem;
+    height: 8rem;
+  }
 
   .content {
     width: 85%;
@@ -562,6 +574,9 @@ footer a {
   }
 
   .faceImg {
+    width: 40vw;
+    height: 40vw;
+
     margin-right: 0;
   }
 
