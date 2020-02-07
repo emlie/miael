@@ -264,6 +264,11 @@ const footer = new Vue ({
         img: 'icons/github-image.svg'
       },
       {
+        title: 'Linkedin',
+        url: 'https://www.linkedin.com/in/mia-elisenberg-45348a164/',
+        img: 'icons/linkedin.svg'
+      },
+      {
         title: 'Facebook',
         url: 'https://www.facebook.com/mia.elisenberg',
         img: 'icons/facebook.svg'
