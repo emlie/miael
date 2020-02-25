@@ -194,6 +194,10 @@ const Projects = {
             {
               title: 'Nivåregulator',
               path: 'esda1/D1_Niv_regulator.pdf'
+            },
+            {
+              title: 'Trekantoscillator med opamp',
+              path: 'esda1/D3_Trekantoscillator.pdf'
             }
           ]
         },
